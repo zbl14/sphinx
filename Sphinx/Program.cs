@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+using System.Linq;
 using Sphinx.Models;
 
 namespace Sphinx
@@ -9,10 +9,10 @@ namespace Sphinx
   public static void Main()
   {
     Console.WriteLine("Welcome to Sphinx World");
-    Console.WriteLine(riddles.ElementAt(0).Value);
+    Console.WriteLine(Riddle.riddles.ElementAt(0).Value);
     Console.WriteLine("What is your answer?");
     string answer = Console.ReadLine();
-    if (answer == riddles.ElementAt(0).Key)
+    if (answer == Riddle.riddles.ElementAt(0).Key)
     {
       Console.WriteLine("You are correct!");
     }
